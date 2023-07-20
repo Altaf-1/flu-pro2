@@ -64,21 +64,28 @@ class Index extends StatelessWidget {
               ),
             ],
           )),
-      body: ListView(
-        children: const [
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.abc),
-              title: Text('data'),
-              subtitle: Text('20-01-2022'),
-              trailing: Column
-              (
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text('data'), Text('-0')],
-              ),
-            ),
-          )
-        ],
+      body: SizedBox(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(
+            children: const [
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.abc),
+                  title: Text(
+                    'Uber',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text('@2:45 am est'),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [SizedBox(height: 30, child: Text('data')), Text("-15.75")],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
